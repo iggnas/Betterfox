@@ -215,8 +215,8 @@ user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 user_pref("extensions.pocket.enabled", false);
 
 /** DOWNLOADS ***/
-user_pref("browser.download.always_ask_before_handling_new_types", true);
-user_pref("browser.download.manager.addToRecentDocs", false);
+// user_pref("browser.download.always_ask_before_handling_new_types", true);
+// user_pref("browser.download.manager.addToRecentDocs", false);
 
 /** PDF ***/
 user_pref("browser.download.open_pdf_attachments_inline", true);
@@ -243,3 +243,134 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 /****************************************************************************
  * END: BETTERFOX                                                           *
 ****************************************************************************/
+
+// PREF: disable Firefox Sync
+user_pref("identity.fxaccounts.enabled", false);
+
+// PREF: disable Firefox View
+user_pref("browser.tabs.firefox-view", false);
+user_pref("browser.tabs.firefox-view-next", false);
+user_pref("browser.tabs.firefox-view-newIcon", false); // needed?
+user_pref("browser.firefox-view.feature-tour", "{\"screen\":\"\",\"complete\":true}");
+
+// PREF: disable login manager
+user_pref("signon.rememberSignons", false);
+
+// PREF: disable address and credit card manager
+user_pref("extensions.formautofill.addresses.enabled", false);
+user_pref("extensions.formautofill.creditCards.enabled", false);
+
+// PREF: do not allow embedded tweets, Instagram, Reddit, and Tiktok posts
+user_pref("urlclassifier.trackingSkipURLs", "");
+user_pref("urlclassifier.features.socialtracking.skipURLs", "");
+
+// PREF: enable HTTPS-Only Mode
+// Warn me before loading sites that don't support HTTPS
+// in both Normal and Private Browsing windows.
+user_pref("dom.security.https_only_mode", true);
+user_pref("dom.security.https_only_mode_error_page_user_suggestions", true);
+
+// PREF: enforce certificate pinning
+// [ERROR] MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE
+user_pref("security.cert_pinning.enforcement_level", 2);
+
+// PREF: set DoH provider
+user_pref("network.trr.uri", "https://dns.quad9.net/dns-query");
+
+// PREF: enforce DNS-over-HTTPS (DoH)
+user_pref("network.trr.mode", 3);
+user_pref("network.dns.skipTRR-when-parental-control-enabled", false);
+
+// PREF: disable all DRM content
+user_pref("media.eme.enabled", false);
+
+// PREF: hide the setting; this also disables the DRM prompt (optional)
+user_pref("browser.eme.ui.enabled", false);
+
+// PREF: require safe SSL negotiation
+// [ERROR] SSL_ERROR_UNSAFE_NEGOTIATION
+user_pref("security.ssl.require_safe_negotiation", true);
+
+// PREF: disable telemetry of what default browser you use [WINDOWS]
+user_pref("default-browser-agent.enabled", false);
+
+// Blank Start Page
+user_pref("browser.startup.page", 0);
+
+// Set HOME+NEWWINDOW page
+user_pref("browser.startup.homepage", "about:blank");
+
+// Set NEWTAB page
+user_pref("browser.newtabpage.enabled", false);
+
+// Use Mozilla geolocation service instead of Google if permission is granted [FF74+]
+user_pref("geo.provider.network.url", "");
+// Disable using the OS's geolocation service
+user_pref("geo.provider.ms-windows-location", false); // [WINDOWS]
+user_pref("geo.provider.use_corelocation", false); // [MAC]
+user_pref("geo.provider.use_gpsd", false); // [LINUX] [HIDDEN PREF]
+user_pref("geo.provider.geoclue.always_high_accuracy", false); // [LINUX]
+user_pref("geo.provider.use_geoclue", false); // [FF102+] [LINUX]
+// -------------------------------------
+// Disable region updates
+user_pref("browser.region.network.url", ""); // [FF78+] Defense-in-depth
+user_pref("browser.region.update.enabled", false); // [FF79+]
+
+// TELEMETRY
+user_pref("toolkit.telemetry.enabled", false); // see [NOTE]
+user_pref("toolkit.telemetry.newProfilePing.enabled", false); // [FF55+]
+user_pref("toolkit.telemetry.shutdownPingSender.enabled", false); // [FF55+]
+user_pref("toolkit.telemetry.updatePing.enabled", false); // [FF56+]
+user_pref("toolkit.telemetry.bhrPing.enabled", false); // [FF57+] Background Hang Reporter
+user_pref("toolkit.telemetry.firstShutdownPing.enabled", false); // [FF57+]
+user_pref("corroborator.enabled", false);
+user_pref("toolkit.telemetry.coverage.opt-out", true); // [HIDDEN PREF]
+user_pref("toolkit.coverage.opt-out", true); // [FF64+] [HIDDEN PREF]
+user_pref("browser.ping-centre.telemetry", false);
+user_pref("media.webvtt.debug.logging", false);
+user_pref("media.webvtt.testing.events", false);
+user_pref("browser.contentblocking.database.enabled", false);
+user_pref("browser.contentblocking.cfr-milestone.enabled", false);
+user_pref("default-browser-agent.enabled", false); // [WINDOWS]
+user_pref("browser.tabs.crashReporting.sendReport", false); // [FF44+]
+user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false); // [DEFAULT: false]
+user_pref("network.captive-portal-service.enabled", false); // [FF52+]
+user_pref("browser.contentblocking.reportBreakage.url", "");
+user_pref("browser.contentblocking.report.cookie.url", "");
+user_pref("browser.contentblocking.report.cryptominer.url", "");
+user_pref("browser.contentblocking.report.fingerprinter.url", "");
+user_pref("browser.contentblocking.report.lockwise.enabled", false);
+user_pref("browser.contentblocking.report.lockwise.how_it_works.url", "");
+user_pref("browser.contentblocking.report.manage_devices.url", "");
+user_pref("browser.contentblocking.report.monitor.enabled", false);
+user_pref("browser.contentblocking.report.monitor.how_it_works.url", "");
+user_pref("browser.contentblocking.report.monitor.sign_in_url", "");
+user_pref("browser.contentblocking.report.monitor.url", "");
+user_pref("browser.contentblocking.report.proxy.enabled", false);
+user_pref("browser.contentblocking.report.proxy_extension.url", "");
+user_pref("browser.contentblocking.report.social.url", "");
+user_pref("browser.contentblocking.report.tracker.url", "");
+user_pref("browser.contentblocking.report.endpoint_url", "");
+user_pref("browser.contentblocking.report.monitor.home_page_url", "");
+user_pref("browser.contentblocking.report.monitor.preferences_url", "");
+user_pref("browser.contentblocking.report.vpn.enabled", false);
+user_pref("browser.contentblocking.report.hide_vpn_banner", true);
+user_pref("browser.contentblocking.report.show_mobile_app", false);
+user_pref("browser.vpn_promo.enabled", false);
+user_pref("browser.promo.focus.enabled", false);
+user_pref("app.feedback.baseURL", "");
+user_pref("app.support.baseURL", "");
+user_pref("app.releaseNotesURL", "");
+user_pref("app.update.url.details", "");
+user_pref("app.update.url.manual", "");
+user_pref("app.update.staging.enabled", false);
+user_pref("gecko.handlerService.schemes.mailto.0.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.mailto.0.name", "");
+user_pref("gecko.handlerService.schemes.mailto.1.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.mailto.1.name", "");
+user_pref("gecko.handlerService.schemes.irc.0.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.irc.0.name", "");
+user_pref("gecko.handlerService.schemes.ircs.0.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.ircs.0.name", "");
+user_pref("browser.translation.engine", "");
+user_pref("services.settings.server", "");
