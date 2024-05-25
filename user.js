@@ -374,3 +374,20 @@ user_pref("gecko.handlerService.schemes.ircs.0.uriTemplate", "");
 user_pref("gecko.handlerService.schemes.ircs.0.name", "");
 user_pref("browser.translation.engine", "");
 user_pref("services.settings.server", "");
+
+// Disable location bar contextual suggestions
+user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false); // [FF95+]
+user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false); // [FF92+]
+// -------------------------------------
+// Disable live search suggestions
+user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.urlbar.suggest.searches", false);
+// -------------------------------------
+// Disable urlbar trending search suggestions [FF118+]
+user_pref("browser.urlbar.trending.featureGate", false);
+// -------------------------------------
+// Disable urlbar suggestions
+user_pref("browser.urlbar.addons.featureGate", false); // [FF115+]
+user_pref("browser.urlbar.mdn.featureGate", false); // [FF117+] [HIDDEN PREF]
+user_pref("browser.urlbar.pocket.featureGate", false); // [FF116+] [DEFAULT: false]
+user_pref("browser.urlbar.weather.featureGate", false); // [FF108+] [DEFAULT: false]
