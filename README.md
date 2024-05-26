@@ -2,6 +2,9 @@
 ![GitHub Maintained](https://img.shields.io/badge/maintained-yes-yellow)
 [![Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyokoffing%2FBetter-Fox&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false)](https://hits.seeyoufarm.com)
 
+# About this fork
+This fork contains additional hardening and some options from [narsil user.js](https://codeberg.org/Narsil/user.js/src/branch/main/desktop)
+
 # Betterfox
 31% faster than regular Firefox<sup>[1](https://medium.com/@mihirgrand/comparing-popular-firefox-forks-6fa83fdfdaad#:~:text=31%25%20more%20than%20vanilla%20Firefox)</sup> :rocket:
 
